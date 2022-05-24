@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsitive Side Menu</title>
+    <link rel="stylesheet" href="./css/shopping-card.css">
+    <link rel="stylesheet" href="./css/side_menu.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSideMenu()">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
+                    <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
+                    <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
+                </svg>
+            </a>
+        </span>
+        <div class="cart-box">
+            <div class="cart-icon">
+              <i class="fas fa-cart-arrow-down fa-2x"></i>
+            </div>
+            <div class="whole-cart-window hide">
+              <h2>Shopping Bag</h2>
+              <div class="cart-wrapper">
+                <!-- <div class="cart-item">
+                           <img src="\img\pic5.jpeg"> 
+                           <div class="details">
+                               <h3>Item Name</h3>
+                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                <span class="quantity">Quantity: 1</span>
+                                   <span class="price">Price: $23.44</span>
+                               </p>
+                           </div>
+                           <div class="cancel"><i class="fas fa-window-close"></i></div>
+                        </div> -->
+                <!-- item 2 -->
+                <!-- <div class="cart-item">
+                            <img src="\img\pic5.jpeg"> 
+                            <div class="details">
+                                <h3>Item Name</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                 <span class="quantity">Quantity: 1</span>
+                                    <span class="price">Price: $23.44</span>
+                                </p>
+                            </div>
+                            <div class="cancel"><i class="fas fa-window-close"></i></div>
+                         </div> -->
+              </div>
+              <div class="subtotal">Subtotal: $0.00</div>
+              <div class="checkout">Checkout</div>
+              <div class="view-cart">View Cart</div>
+            </div>
+          </div>
+        <ul class="navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </nav>
+        <div id="side-menu" class="side-nav">
+            <a href="#" class="side-menu__link" onclick="closeSideMenu()"><i class="fa-solid fa-rectangle-xmark"></i></a>
+            <a class="side-menu__link" id="01" href="#" onclick="openDropdownMenu(id)">
+              <object type="image/svg+xml" data="./img/svg_repo/women-coat-svgrepo-com.svg" width="25" height="25"></object>&nbsp;&nbsp;&nbsp;Одяг для танців&nbsp;&nbsp;&nbsp;<object id="obj01" type="image/svg+xml" data="./img/svg_repo/arrow-right-round-svgrepo-com.svg" width="25" height="25"></object>
+            </a>      
+             <ul class="side-menu__list" id="ul01">
+                <li><a href="#">Приклад приклад приклад</a></li>
+                <li><a href="#">Приклад приклад приклад</a></li>
+                <li><a href="#">Приклад приклад приклад</a></li>
+                <li><a href="#">Приклад приклад приклад</a></li>
+                <li><a href="#">Приклад приклад приклад</a></li>
+                <li><a href="#">Приклад приклад приклад</a></li>
+            </ul>
+            <a class="side-menu__link" id="02" href="#" onclick="openDropdownMenu(id)">
+              <object type="image/svg+xml" data="./img/svg_repo/women-high-boot-svgrepo-com.svg" width="25" height="25"></object>&nbsp;&nbsp;&nbsp;Взуття для танців&nbsp;&nbsp;&nbsp;<object id="obj02" type="image/svg+xml" data="./img/svg_repo/arrow-right-round-svgrepo-com.svg" width="25" height="25"></object>
+            </a>
+            <ul class="side-menu__list" id="ul02">
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+            </ul>
+            <a class="side-menu__link" id="03" href="#" onclick="openDropdownMenu(id)">
+              <object type="image/svg+xml" data="./img/svg_repo/heart-bracelet-svgrepo-com.svg" width="25" height="25"></object>&nbsp;&nbsp;&nbsp;Аксесуари для танців&nbsp;&nbsp;&nbsp;<object id="obj03" type="image/svg+xml" data="./img/svg_repo/arrow-right-round-svgrepo-com.svg" width="25" height="25"></object>
+            </a>
+            <ul class="side-menu__list" id="ul03">
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+            </ul>
+            <a class="side-menu__link" id="04" href="#" onclick="openDropdownMenu(id)">
+              <object type="image/svg+xml" data="./img/svg_repo/needle-svgrepo-com.svg" width="25" height="25"></object>&nbsp;&nbsp;&nbsp;Ексклюзивний дизайн та пошив&nbsp;&nbsp;&nbsp;<object id="obj04" type="image/svg+xml" data="./img/svg_repo/arrow-right-round-svgrepo-com.svg" width="25" height="25"></object><i></i></a>
+            </a>
+            <ul class="side-menu__list" id="ul04">
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+            </ul>
+            <a class="side-menu__link" id="05" href="#" onclick="openDropdownMenu(id)">
+              <object type="image/svg+xml" data="./img/svg_repo/stiching-fabric-svgrepo-com.svg" width="25" height="25"></object>&nbsp;&nbsp;&nbsp;Заміри&nbsp;&nbsp;&nbsp;<object id="obj05" type="image/svg+xml" data="./img/svg_repo/arrow-right-round-svgrepo-com.svg" width="25" height="25"></object><i></i></a>
+            <ul class="side-menu__list" id="ul05">
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+                <li><a href="#">111111</a></li>
+            </ul>
+            <a class="side-menu__link" id="06" href="#" onclick="openDropdownMenu(id)">
+              <object type="image/svg+xml" data="./img/svg_repo/handshake-svgrepo-com.svg" width="25" height="25"></object>&nbsp;Співпраця&nbsp;&nbsp;<object id="obj06" type="image/svg+xml" data="./img/svg_repo/arrow-right-round-svgrepo-com.svg" width="25" height="25"></object>
+          </a>
+          <ul class="side-menu__list" id="ul06">
+              <li><a href="#">111111</a></li>
+              <li><a href="#">111111</a></li>
+              <li><a href="#">111111</a></li>
+              <li><a href="#">111111</a></li>
+              <li><a href="#">111111</a></li>
+              <li><a href="#">111111</a></li>
+          </ul>
+          <a class="side-menu__link" id="07" href="#" onclick="openDropdownMenu(id)">
+            <object type="image/svg+xml" data="./img/svg_repo/handshake-svgrepo-com.svg" width="25" height="25"></object>&nbsp;Тканини, кристали, фурнітура&nbsp;&nbsp;<object id="obj07" type="image/svg+xml" data="./img/svg_repo/arrow-right-round-svgrepo-com.svg" width="25" height="25"></object>
+        </a>
+        <ul class="side-menu__list" id="ul07">
+            <li><a href="#">111111</a></li>
+            <li><a href="#">111111</a></li>
+            <li><a href="#">111111</a></li>
+            <li><a href="#">111111</a></li>
+            <li><a href="#">111111</a></li>
+            <li><a href="#">111111</a></li>
+        </ul>
+        <a class="side-menu__link" id="07" href="#" onclick="openDropdownMenu(id)">
+          <object type="image/svg+xml" data="./img/svg_repo/fabric-material-svgrepo-com.svg" width="25" height="25"></object>&nbsp;Тканини, кристали, фурнітура&nbsp;&nbsp;<object id="obj07" type="image/svg+xml" data="./img/svg_repo/arrow-right-round-svgrepo-com.svg" width="25" height="25"></object>
+      </a>
+      <ul class="side-menu__list" id="ul07">
+          <li><a href="#">111111</a></li>
+          <li><a href="#">111111</a></li>
+          <li><a href="#">111111</a></li>
+          <li><a href="#">111111</a></li>
+          <li><a href="#">111111</a></li>
+          <li><a href="#">111111</a></li>
+      </ul>
+        </div>
+        <div id="main">
+
+        </div>
+    </nav>
+</header>
+<section class="slider-section">
+  <div class="slider">
+      <div class="slider__container">
+          <img class="slider__image fade" src="./img/slider/slide1.jpg" alt="slide picture">
+      </div>
+      <div class="slider__controls">
+          <div class="slider__dots">
+              <span class="slider__dot active" onclick="changeIndex(0)"></span>
+              <span class="slider__dot" onclick="changeIndex(1)"></span>
+              <span class="slider__dot" onclick="changeIndex(2)"></span> 
+              <span class="slider__dot" onclick="changeIndex(3)"></span> 
+              <span class="slider__dot" onclick="changeIndex(4)"></span> 
+          </div>
+          <!-- <button class="slider__nav slider__nav-left" onclick="nextIndex(-1)">&lt;</button> -->
+          <!-- <button class="slider__nav slider__nav-right" onclick="nextIndex(1)">&gt;</button> -->
+      </div>
+  </div>
+</section>
+    <section class="shop-section">
+        <div class="card-wrapper">
+          <div data-id="1" class="card-item">
+            <img src="./img/slider/slide1.jpg" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span
+                >
+  
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+          <!-- item 2 -->
+          <div data-id="2" class="card-item">
+            <img src="./img/slider/slide2.jpg" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </span>
+  
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+  
+          <!-- product 3 -->
+          <div data-id="3" class="card-item">
+            <img src="./img/slider/slide3.jpg" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span
+                >
+  
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+  
+          <!-- product 4 -->
+          <div data-id="4" class="card-item">
+            <img src="./img/slider/slide4.jpg" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </span>
+  
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+          <!-- product 5 -->
+          <div data-id="5" class="card-item">
+            <img src="./img/slider/slide5.jpg" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span
+                >
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+  
+          <!-- product 6 -->
+          <div data-id="6" class="card-item">
+            <img src="./img/slider/slide1.jpg" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </span>
+  
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+  
+          <!-- product 7 -->
+          <div data-id="7" class="card-item">
+            <img src="./img/slider/slide2.jpg" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </span>
+  
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+  
+          <!-- product 8 -->
+          <div data-id="8" class="card-item">
+            <img src="./img/slider/slide3.jpg" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span
+                >
+  
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+  
+          <!-- product 9 -->
+  
+          <div data-id="9" class="card-item">
+            <img src="./img/slider/slide4.jpg" />
+            <div class="details">
+              <h3>Item Name</h3>
+              <p>
+                <span
+                  >Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span
+                >
+  
+                <span class="price">Price: $23.44</span>
+                <span class="add-to-cart-btn">Add To Cart</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script src="./js/dropdown_menu.js"></script>
+      <script src="./js/shopping-card.js"></script>
+      <script src="./js/side_menu.js"></script>
+      <script src="./js/slider.js"></script>
+
+</body>
+</html>

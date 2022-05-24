@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/logo.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/lightbox.min.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="login-register">
+            <div class="container login-register__container">
+                <button class="login-btn" type="button">
+                    <object type="image/svg+xml" data="./img/svg/user-user-svgrepo-com.svg" width="25" height="25"></object>
+                    Вхід
+                </button>
+                <button class="login-btn" type="button">
+                    <object type="image/svg+xml" data="./img/svg/plus-svgrepo-com.svg" width="25" height="25"></object>
+                    &nbsp;Нова реєстрація
+                </button>
+            </dvi>
+        </div>
+        <nav class="navbar">
+            <span class="open-slide">
+                <a href="#" class="open-item" onclick="openSideMenu()">
+                    <object type="image/svg+xml" data="./img/svg/bars-bars-svgrepo-com.svg" width="45" height="45"></object>
+                </a>
+                <a href="#" class="close-item" onclick="closeSideMenu()">
+                    <object type="image/svg+xml" data="./img/svg/close-i-svgrepo-com.svg" width="45" height="45"></object>
+                </a>
+            </span>
+            <ul class="navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="navbar-items">
+                <li><a href="#"><object type="image/svg+xml" data="./img/svg/user-icon-svgrepo-com.svg" width="25" height="25"></object></a></li>
+                <li><a href="#"><object type="image/svg+xml" data="./img/svg/bag-bag-svgrepo-com.svg" width="25" height="25"></object></a></li>
+                <li><a href="#"><object type="image/svg+xml" data="./img/svg/search-svgrepo-com.svg" width="25" height="25"></object></a></li>
+                <li><a href="#"><object type="image/svg+xml" data="./img/svg/phone-svgrepo-com.svg" width="25" height="25"></object></a></li>
+            </ul>
+            <div class="cart-box">
+                <div class="cart-icon">
+                  <i class="fas fa-cart-arrow-down fa-2x"></i>
+                </div>
+                <div class="whole-cart-window hide">
+                  <h2>Shopping Bag</h2>
+                  <div class="cart-wrapper">
+                    <!-- <div class="cart-item">
+                               <img src="\img\pic5.jpeg"> 
+                               <div class="details">
+                                   <h3>Item Name</h3>
+                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    <span class="quantity">Quantity: 1</span>
+                                       <span class="price">Price: $23.44</span>
+                                   </p>
+                               </div>
+                               <div class="cancel"><i class="fas fa-window-close"></i></div>
+                            </div> -->
+                    <!-- item 2 -->
+                    <!-- <div class="cart-item">
+                                <img src="\img\pic5.jpeg"> 
+                                <div class="details">
+                                    <h3>Item Name</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                     <span class="quantity">Quantity: 1</span>
+                                        <span class="price">Price: $23.44</span>
+                                    </p>
+                                </div>
+                                <div class="cancel"><i class="fas fa-window-close"></i></div>
+                             </div> -->
+                  </div>
+                  <div class="subtotal">Subtotal: $0.00</div>
+                  <div class="checkout">Checkout</div>
+                  <div class="view-cart">View Cart</div>
+                </div>
+              </div>
+        </nav>
+        <nav class="nav">
+            <div id="side-menu" class="side-nav">
+                <a class="test_link" id="01" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/women-blouse-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Одяг для танців&nbsp;&nbsp;<object id="obj01" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u01">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+                <a class="test_link" id="02" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/shoes-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Взуття для танців&nbsp;&nbsp;<object id="obj02" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u02">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+                <a class="test_link" id="03" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/two-earrings-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Аксесуари для танців&nbsp;&nbsp;<object id="obj03" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u03">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+                <a class="test_link" id="04" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/spool-of-thread-fashion-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Ексклюзивний дизайн та пошив&nbsp;&nbsp;<object id="obj04" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u04">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+                <a class="test_link" id="05" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/rule-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Заміри&nbsp;&nbsp;<object id="obj05" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u05">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+                <a class="test_link" id="06" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/notes-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Співпраця&nbsp;&nbsp;<object id="obj06" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u06">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+                <a class="test_link" id="07" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/fabric-material-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Тканини, кристали, фурнітура&nbsp;&nbsp;<object id="obj07" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u07">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+                <br />
+                <a class="test_link" id="08" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/cosmetics-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Косметика&nbsp;&nbsp;<object id="obj08" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u08">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+                <a class="test_link" id="09" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/souvenir-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Сувеніри&nbsp;&nbsp;<object id="obj09" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u09">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+                <a class="test_link" id="10" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/bag-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Сумки&nbsp;&nbsp;<object id="obj10" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u10">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+                <a class="test_link" id="11" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/women-long-coat-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Одяг на прокат&nbsp;&nbsp;<object id="obj11" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u11">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+                <a class="test_link" id="12" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/camera-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Фотогалерея&nbsp;&nbsp;<object id="obj12" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u12">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+                <a class="test_link" id="13" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/notes-notes-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Оголошення для клієнтів&nbsp;&nbsp;<object id="obj13" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u13">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+                <a class="test_link" id="14" href="#" onclick="showDropdownItems(id)">
+                    <object type="image/svg+xml" data="./img/svg/notes-notes-notes-svgrepo-com.svg" width="20" height="20"></object>&nbsp;Оголошення на пошук партнера та партнерки&nbsp;&nbsp;<object id="obj14" type="image/svg+xml" data="./img/svg/arrow-right-i-svgrepo-com.svg" width="20" height="20"></object>
+                </a>
+                <ul class="test_list" id="u14">
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                    <li><a href="#">111111</a></li>
+                </ul>
+            </div>
+            <div id="main">
+                    
+            </div>
+        </nav>
+      </header>
+    <section>
+        <div class="section-main">
+            <div class="section-main__column2">
+                <div class="slider__container">                 
+                    <div class="slider">
+                        <div class="slider__container">
+                            <img class="slider__image fade" src="./img/slider/aston-margin.jpg" alt="slide picture">
+                            <!-- 
+                            <button class="slider__nav slider__nav-left" onclick="nextIndex(-1)">&lt;</button>
+                            <button class="slider__nav slider__nav-right" onclick="nextIndex(1)">&gt;</button> 
+                            -->
+                        </div>
+                        <div class="slider__controls">
+                            <div class="slider__wrapper">
+                                <div class="slider__dots">
+                                    <span class="slider__dot active" onclick="changeIndex(0)">
+                                        <span class="slider__sign">
+                                            <object class="sign-dot" type="image/svg+xml" data="./img/svg/dot-svgrepo-com.svg" width="20" height="20"></object>
+                                        </span>
+                                    </span>
+                                    <span class="slider__dot" onclick="changeIndex(1)">
+                                        <span class="slider__sign">
+                                            <object class="sign-dot" type="image/svg+xml" data="./img/svg/dot-svgrepo-com.svg" width="20" height="20"></object>
+                                        </span>
+                                    </span>
+                                    <span class="slider__dot" onclick="changeIndex(2)">
+                                        <span class="slider__sign">
+                                            <object class="sign-dot" type="image/svg+xml" data="./img/svg/dot-svgrepo-com.svg" width="20" height="20"></object>
+                                        </span>
+                                    </span> 
+                                    <span class="slider__dot" onclick="changeIndex(3)">
+                                        <span class="slider__sign">
+                                            <object class="sign-dot" type="image/svg+xml" data="./img/svg/dot-svgrepo-com.svg" width="20" height="20"></object>
+                                        </span>
+                                    </span> 
+                                    <span class="slider__dot" onclick="changeIndex(4)">
+                                        <span class="slider__sign">
+                                            <object class="sign-dot" type="image/svg+xml" data="./img/svg/dot-svgrepo-com.svg" width="20" height="20"></object>
+                                        </span>
+                                    </span> 
+                                    <span class="slider__dot" onclick="changeIndex(5)">
+                                        <span class="slider__sign">
+                                            <object class="sign-dot" type="image/svg+xml" data="./img/svg/dot-svgrepo-com.svg" width="20" height="20"></object>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-main__column1">
+                <div class="section-main__categories">
+                    <ul>
+                        <li><object type="image/svg+xml" data="./img/svg/apparel-dress-night-svgrepo-com.svg" width="20" height="20"></object><a href="#">Ноутбуки и компьютеры</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/bathrobe-dressing-gown-svgrepo-com.svg" width="20" height="20"></object><a href="#">Смартфоны, ТВ и электроника</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/beaver-hat-high-svgrepo-com.svg" width="20" height="20"></object><a href="#">Товары для геймеров</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/bikini-camisole-lingerie-svgrepo-com.svg" width="20" height="20"></object><a href="#">Бытовая техника</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/blouse-cami-camisole-2-svgrepo-com.svg" width="20" height="20"></object><a href="#">Товары для дома</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/blouse-cami-camisole-3-svgrepo-com.svg" width="20" height="20"></object><a href="#">Инструменты и автотовары</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/blouse-cami-camisole-svgrepo-com.svg" width="20" height="20"></object><a href="#">Сантехника и ремонт</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/boxers-briefs-knickers-svgrepo-com.svg" width="20" height="20"></object><a href="#">Дача, сад и огород</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/briefs-shorts-swim-2-svgrepo-com.svg" width="20" height="20"></object><a href="#">Спорт и увлечения</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/briefs-shorts-swim-3-svgrepo-com.svg" width="20" height="20"></object><a href="#">Одежда, обувь и украшения</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/briefs-shorts-swim-svgrepo-com.svg" width="20" height="20"></object><a href="#">Красота и здоровье</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/camisole-mens-tank-svgrepo-com.svg" width="20" height="20"></object><a href="#">Детские товары</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/clothes-full-shirt-2-svgrepo-com.svg" width="20" height="20"></object><a href="#">Зоотовары</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/clothing-fashion-shirt-2-svgrepo-com.svg" width="20" height="20"></object><a href="#">Уцененные товары</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/clothing-footwear-hosiery-2-svgrepo-com.svg" width="20" height="20"></object><a href="#">Алкогольные напитки и продукты</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/clothing-mini-skirt-svgrepo-com.svg" width="20" height="20"></object><a href="#">Товары для бизнеса и услуги</a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/cowboy-dressing-fashion-2-svgrepo-com.svg" width="20" height="20"></object><a href="#">Закупитесь нужным до -45%</a></li>
+                    </ul>
+                </div>
+                <div class="section-main__handbook">
+                    <ul>
+                        <li><object type="image/svg+xml" data="./img/svg/info-svgrepo-com.svg" width="20" height="20"></object><a href="#">Справочный центр</a></li>
+                    </ul>
+                </div>             
+                <div class="section-main__location">
+                    <ul>
+                        <li><object type="image/svg+xml" data="./img/svg/location-svgrepo-com.svg" width="20" height="20"></object><a href="#">Точка видачі DANCE.NL</a></li>
+                    </ul>
+                </div> 
+                <div class="section-main__personal-page">
+                    <h3>Ласкаво просимо !</h3>
+                    <p>Увійдіть, щоб отримувати рекомендації, персональні бонуси та знижки.</p>
+                    <button type="button">
+                        Увійти в особистий кабінет
+                    </button>
+                </div>
+                <div class="section-main__social-network">
+                    <h3>Ми в соціальних мережах</h3>
+                    <ul>
+                        <li><object type="image/svg+xml" data="./img/svg/facebook-svgrepo-com.svg" width="35" height="35"></object><a href="#"></a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/telegram-svgrepo-com.svg" width="50" height="35"></object><a href="#"></a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/twitter-svgrepo-com.svg" width="50" height="35"></object><a href="#"></a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/viber-svgrepo-com.svg" width="50" height="35"></object><a href="#"></a></li>
+                        <li><object type="image/svg+xml" data="./img/svg/tiktok-logo-duotone-svgrepo-com.svg" width="35" height="35"></object><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div style="text-align: left; padding-left: 25px; padding-top: 25px; padding-bottom: 30px; background-color: #eeac55;">
+                    <ul style="list-style-type: none;">
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Про нас</a></li>
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Умови використання сайту</a></li>
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Контакти</a></li>
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Про нас</a></li>
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Умови використання сайту</a></li>
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Контакти</a></li>
+                    </ul>
+                </div>
+                <div style="text-align: left; padding-left: 25px; padding-bottom: 30px;">
+                    <ul style="list-style-type: none;">
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Про нас</a></li>
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Умови використання сайту</a></li>
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Контакти</a></li>
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Про нас</a></li>
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Умови використання сайту</a></li>
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Контакти</a></li>
+                    </ul>
+                </div>
+                <div style="text-align: left; padding-left: 25px; padding-bottom: 30px;">
+                    <ul style="list-style-type: none;">
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Про нас</a></li>
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Умови використання сайту</a></li>
+                        <li style="padding-bottom: 10px;"><a style="text-decoration: none; font-size: 20px;" href="#">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="section-main__trademark">
+                    <p>Торгова марка використовується на основі ліцензії правовласника DanceNL.LTD.</p>
+                    <p>© Інтернет-магазин "Dance NL ™" 2022-2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div style="background-color: #565653; width: 100%; height: 95px;">
+
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/slider.js" type="text/javascript"></script>
+    <script src="./js/burgerBtn.js" type="text/javascript"></script>
+    <script src="./js/script.js" type="text/javascript"></script>
+    <script src="./js/dropdown.js" type="text/javascript"></script>
+    
+</body>
+</html> 
